@@ -28,23 +28,48 @@ import {
 const STORAGE_DATA_KEY = 'surya_portfolio_data_v2';
 const STORAGE_SETTINGS_KEY = 'surya_portfolio_settings_v1';
 
-function loadStoredJson<T>(key: string, fallback: T): T {
+function loadPortfolioData(): PortfolioData {
   try {
-    const raw = localStorage.getItem(key);
-    if (!raw) return fallback;
-    return { ...fallback, ...JSON.parse(raw) };
+    const raw = localStorage.getItem(STORAGE_DATA_KEY);
+    if (!raw) return INITIAL_PORTFOLIO_DATA;
+    const parsed = JSON.parse(raw);
+    return {
+      ...INITIAL_PORTFOLIO_DATA,
+      ...parsed,
+      metrics: Array.isArray(parsed?.metrics)
+        ? parsed.metrics
+        : INITIAL_PORTFOLIO_DATA.metrics,
+      artworks: Array.isArray(parsed?.artworks)
+        ? parsed.artworks
+        : INITIAL_PORTFOLIO_DATA.artworks,
+      skills: Array.isArray(parsed?.skills)
+        ? parsed.skills
+        : INITIAL_PORTFOLIO_DATA.skills,
+      experiences: Array.isArray(parsed?.experiences)
+        ? parsed.experiences
+        : INITIAL_PORTFOLIO_DATA.experiences,
+      certificates: Array.isArray(parsed?.certificates)
+        ? parsed.certificates
+        : INITIAL_PORTFOLIO_DATA.certificates,
+    };
   } catch {
-    return fallback;
+    return INITIAL_PORTFOLIO_DATA;
+  }
+}
+
+function loadUISettings(): UISettings {
+  try {
+    const raw = localStorage.getItem(STORAGE_SETTINGS_KEY);
+    if (!raw) return DEFAULT_UI_SETTINGS;
+    return { ...DEFAULT_UI_SETTINGS, ...JSON.parse(raw) };
+  } catch {
+    return DEFAULT_UI_SETTINGS;
   }
 }
 
 export default function App() {
-  const [data, setData] = useState<PortfolioData>(() =>
-    loadStoredJson(STORAGE_DATA_KEY, INITIAL_PORTFOLIO_DATA)
-  );
-  const [settings, setSettings] = useState<UISettings>(() =>
-    loadStoredJson(STORAGE_SETTINGS_KEY, DEFAULT_UI_SETTINGS)
-  );
+  const [data, setData] = useState<PortfolioData>(loadPortfolioData);
+  const [settings, setSettings] = useState<UISettings>(loadUISettings);
 
   const [adjusterOpen, setAdjusterOpen] = useState(false);
   const [isEditMode, setIsEditMode] = useState(false);

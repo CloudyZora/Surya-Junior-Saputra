@@ -44,7 +44,7 @@ export const ArtworkEditorModal: React.FC<ArtworkEditorModalProps> = ({
       setRole('2D Character Designer');
       setStatusNote('Full Body · Final');
       setDescription('');
-      setImageUrl('/assets/aistudio/WhatsApp_Image_2025-07-31_at_13.58.34_f0c0f1fe.jpeg');
+      setImageUrl('./assets/aistudio/WhatsApp_Image_2025-07-31_at_13.58.34_f0c0f1fe.jpeg');
     }
   }, [editingArtwork, isOpen]);
 

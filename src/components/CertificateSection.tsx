@@ -66,7 +66,7 @@ export const CertificateSection: React.FC<CertificateSectionProps> = ({
       period: '2025',
       predicate: 'Baik',
       signatories: 'Pimpinan Institusi',
-      imageUrl: '/assets/aistudio/IMG_20261025_184120_bb398d35.jpg',
+      imageUrl: './assets/aistudio/IMG_20261025_184120_bb398d35.jpg',
     };
     const next = [...certificates, newCert];
     onUpdateCertificates(next);

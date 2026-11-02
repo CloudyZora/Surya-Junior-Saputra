@@ -39,7 +39,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
     'Halo! Saya Surya Junior Saputra, kreator visual dari Program Keahlian Animasi SMK Komputama Majenang yang berpengalaman menjalani praktik industri langsung di Funymation Studio Yogyakarta.',
   aboutBody:
     'Saya memadukan kepekaan desain karakter 2D dengan pemahaman teknis produksi studio—mulai dari perancangan lembar turnaround 6 sudut pandang, pengerjaan animasi berbasis industri menggunakan Toon Boom Harmony, hingga kolaborasi produksi film animasi 3D.',
-  heroImageUrl: '/assets/aistudio/WhatsApp_Image_2025-07-31_at_14.00.50_c2ee9f5f.jpeg',
+  heroImageUrl: './assets/aistudio/WhatsApp_Image_2025-07-31_at_14.00.50_c2ee9f5f.jpeg',
   heroImageCaption: 'Studi Ensemble Keluarga “Dudjom & Yesang” · Full Body Lineup (2025)',
   metrics: [
     {
@@ -78,7 +78,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       statusNote: 'Full Body · Sketch & Finishing',
       description:
         'Komposisi perbandingan tinggi badan, palet warna kostum tradisional, dan kontras siluet lima anggota keluarga (Dudjom, Yesang, putra, putri, serta bayi) agar mudah dikenali dalam satu adegan.',
-      imageUrl: '/assets/aistudio/WhatsApp_Image_2025-07-31_at_14.00.50_c2ee9f5f.jpeg',
+      imageUrl: './assets/aistudio/WhatsApp_Image_2025-07-31_at_14.00.50_c2ee9f5f.jpeg',
       featured: true,
     },
     {
@@ -91,7 +91,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       statusNote: '6 Sudut Pandang · Clean Line & Cel Shade',
       description:
         'Studi rotasi penuh 6 pose untuk tokoh ayah (Dudjom) mengenakan jubah chuba krem berkerah hitam, sabuk kain merah, aksen bulu pada lengan, dan sepatu bot tinggi.',
-      imageUrl: '/assets/aistudio/WhatsApp_Image_2025-07-31_at_13.58.34_f0c0f1fe.jpeg',
+      imageUrl: './assets/aistudio/WhatsApp_Image_2025-07-31_at_13.58.34_f0c0f1fe.jpeg',
       featured: false,
     },
     {
@@ -104,7 +104,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       statusNote: 'Full Body · Sketch & Finishing',
       description:
         'Lembar kerja produksi 6 sudut pandang untuk karakter putri dengan detail kepang dua berhias jepit pirus, perpaduan tunik merah marun, serta jubah luar biru tua.',
-      imageUrl: '/assets/aistudio/WhatsApp_Image_2025-07-31_at_14.00.49__1__f99fc05b.jpeg',
+      imageUrl: './assets/aistudio/WhatsApp_Image_2025-07-31_at_14.00.49__1__f99fc05b.jpeg',
       featured: false,
     },
     {
@@ -117,7 +117,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       statusNote: 'Full Body · Sketch & Finishing',
       description:
         'Studi rotasi penuh karakter anak laki-laki dengan ekspresi ceria, lapisan mantel oker bertepi bulu tebal, dan tunik hijau zaitun yang dirancang untuk konsistensi gerak.',
-      imageUrl: '/assets/aistudio/WhatsApp_Image_2025-07-31_at_14.00.49__2__fd68c1e7.jpeg',
+      imageUrl: './assets/aistudio/WhatsApp_Image_2025-07-31_at_14.00.49__2__fd68c1e7.jpeg',
       featured: false,
     },
     {
@@ -130,7 +130,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       statusNote: 'Full Body · Sketch & Finishing',
       description:
         'Eksplorasi proporsi dan volume bedung bayi berbulu hangat dari 6 sudut rotasi guna memudahkan pencahayaan dan penempatan saat digendong karakter utama.',
-      imageUrl: '/assets/aistudio/WhatsApp_Image_2025-07-31_at_14.00.49_aa37cbfa.jpeg',
+      imageUrl: './assets/aistudio/WhatsApp_Image_2025-07-31_at_14.00.49_aa37cbfa.jpeg',
       featured: false,
     },
     {
@@ -143,7 +143,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       statusNote: 'Predikat Baik · No. 004/FM-EDU-PKL/XII/2025',
       description:
         'Pelaksanaan produksi dan pelatihan kerja berbasis industri selama 6 bulan penuh menggunakan perangkat lunak animasi 2D profesional Toon Boom Harmony di Funymation Studio Yogyakarta.',
-      imageUrl: '/assets/aistudio/IMG_20261025_184120_bb398d35.jpg',
+      imageUrl: './assets/aistudio/IMG_20261025_184120_bb398d35.jpg',
       featured: true,
     },
     {
@@ -156,7 +156,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       statusNote: 'Sertifikasi Resmi · No. 001/ANI/Pro3D/V/2025',
       description:
         'Kolaborasi produksi film animasi 3D selama satu semester di SMK Komputama Majenang, mencakup pengembangan aset visual, penataan adegan, hingga penyelesaian akhir.',
-      imageUrl: '/assets/aistudio/SURYA_569ccf39.jpg',
+      imageUrl: './assets/aistudio/SURYA_569ccf39.jpg',
       featured: false,
     },
   ],
@@ -238,7 +238,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       period: '14 Juli 2025 – 30 Desember 2025',
       predicate: 'BAIK',
       signatories: 'Susilo Dwi Murwanto (Direktur Funymation Studio)',
-      imageUrl: '/assets/aistudio/IMG_20261025_184120_bb398d35.jpg',
+      imageUrl: './assets/aistudio/IMG_20261025_184120_bb398d35.jpg',
     },
     {
       id: 'cert-psg-funymation-yk2',
@@ -250,7 +250,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       period: '14 Juli 2025 – 31 Desember 2025',
       predicate: 'Tuntas PSG',
       signatories: 'Akhmad Musyafa Kholil, S.E. · Susilo Dwi Murwanto, S.Sn.',
-      imageUrl: '/assets/aistudio/IMG_20261025_184155_53b412f1.jpg',
+      imageUrl: './assets/aistudio/IMG_20261025_184155_53b412f1.jpg',
     },
     {
       id: 'cert-pro3d-komputama',
@@ -262,7 +262,7 @@ export const INITIAL_PORTFOLIO_DATA: PortfolioData = {
       period: '6 Januari 2025 – 22 Mei 2025',
       predicate: 'Penghargaan Produksi',
       signatories: 'Akhmad Musyafa Kholil, S.E. · Mudiono, S.Kom, M.Pd.',
-      imageUrl: '/assets/aistudio/SURYA_569ccf39.jpg',
+      imageUrl: './assets/aistudio/SURYA_569ccf39.jpg',
     },
   ],
 };

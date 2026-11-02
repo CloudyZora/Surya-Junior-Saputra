@@ -5,6 +5,7 @@ import {
   ProfileFocusY,
   ProfileZoom,
 } from '../types/portfolio';
+import { resolveAssetUrl } from '../utils/assetUrl';
 import { compressImageToDataUrl } from '../utils/imageUpload';
 
 interface ProfileSectionProps {
@@ -66,7 +67,7 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({
                 {data.profileImageUrl ? (
                   <>
                     <img
-                      src={data.profileImageUrl}
+                      src={resolveAssetUrl(data.profileImageUrl)}
                       alt={`Foto profil ${data.fullName}`}
                       referrerPolicy="no-referrer"
                       decoding="async"

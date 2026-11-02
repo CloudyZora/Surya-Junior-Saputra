@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Image as ImageIcon } from 'lucide-react';
+import { resolveAssetUrl } from '../utils/assetUrl';
 
 interface ResilientImageProps {
   src: string;
@@ -18,6 +19,7 @@ export const ResilientImage: React.FC<ResilientImageProps> = ({
   fit = 'contain',
   priority = false,
 }) => {
+  const resolvedSrc = resolveAssetUrl(src);
   const [hasError, setHasError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -29,9 +31,9 @@ export const ResilientImage: React.FC<ResilientImageProps> = ({
     } else {
       setIsLoaded(false);
     }
-  }, [src]);
+  }, [resolvedSrc]);
 
-  if (hasError || !src) {
+  if (hasError || !resolvedSrc) {
     return (
       <div
         className={`flex flex-col items-center justify-center p-6 text-center bg-[var(--bg-surface)] text-[var(--text-muted)] ${containerClassName}`}
@@ -52,7 +54,7 @@ export const ResilientImage: React.FC<ResilientImageProps> = ({
       )}
       <img
         ref={imgRef}
-        src={src}
+        src={resolvedSrc}
         alt={alt}
         referrerPolicy="no-referrer"
         loading={priority ? 'eager' : 'lazy'}

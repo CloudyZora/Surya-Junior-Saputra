@@ -24,7 +24,28 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="./src/main.tsx"></script>
+    <script>
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          if (!window.__PORTFOLIO_MOUNTED__ && location.hostname.indexOf('github.io') !== -1) {
+            var root = document.getElementById('root');
+            if (root && !root.innerHTML.trim()) {
+              root.innerHTML =
+                '<div style="max-width:560px;margin:80px auto;padding:28px;font-family:system-ui,sans-serif;color:#141413;background:#f9f8f4;border:1px solid rgba(20,20,19,0.14);border-radius:16px;line-height:1.6">' +
+                '<h1 style="font-size:20px;margin:0 0 8px 0">Pengaturan GitHub Pages Perlu Diubah ke GitHub Actions</h1>' +
+                '<p style="font-size:14px;margin:0 0 12px 0;color:#52514c">Saat ini GitHub Pages masih menampilkan kode mentah (.tsx) dari cabang secara langsung sehingga aplikasi React belum terkompilasi.</p>' +
+                '<ol style="font-size:14px;margin:0;padding-left:20px;color:#141413">' +
+                '<li>Buka repositori GitHub Anda lalu klik tab <b>Settings</b> &rarr; <b>Pages</b>.</li>' +
+                '<li>Pada bagian <b>Build and deployment &rarr; Source</b>, ubah dari <i>Deploy from a branch</i> menjadi <b>GitHub Actions</b>.</li>' +
+                '<li>Tunggu sekitar 1 menit hingga proses <i>Actions</i> selesai, lalu muat ulang halaman ini.</li>' +
+                '</ol>' +
+                '</div>';
+            }
+          }
+        }, 1800);
+      });
+    </script>
   </body>
 </html>
 
